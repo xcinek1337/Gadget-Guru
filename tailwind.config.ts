@@ -12,6 +12,9 @@ const config: Config = {
 				'hero-small': "url('/hero-small.jpg')",
 				'hero-big': "url('/hero-big.jpg')",
 			},
+			fontFamily: {
+				logoFont: ['VT323', 'monospace'],
+			},
 		},
 	},
 	plugins: [],
