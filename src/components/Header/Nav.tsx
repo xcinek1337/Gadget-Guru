@@ -25,7 +25,7 @@ export const Nav = ({ className }: { className: string }) => {
 						<Link
 							className={`${
 								pathname === link?.href ? 'font-bold' : ''
-							} border-b-2-transparent hover:font-bold hover:border-b-2 hover:border-b-orange-200 transition `}
+							} border-b-2-transparent sm:hover:font-bold sm:hover:border-b-2 hover:border-b-orange-200 transition `}
 							href={link?.href!}
 							key={link?.label}>
 							{link?.label}
@@ -42,7 +42,7 @@ export const Nav = ({ className }: { className: string }) => {
 						<Link
 							className={`${
 								pathname === link.href ? 'font-bold' : ''
-							}  border-b-2-transparent hover:font-bold hover:border-b-2 hover:border-b-orange-200 transition `}
+							}  border-b-2-transparent hover:font-bold sm:hover:border-b-2 sm:hover:border-b-orange-200 transition `}
 							href={link.href}
 							key={link.label}>
 							{link.label}
