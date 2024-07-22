@@ -4,7 +4,7 @@ import { PopoverBackdrop, PopoverButton, PopoverPanel, Transition } from '@headl
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid'
 import { Fragment } from 'react'
 
-export default function NavMobile({ isLogged }: { isLogged: boolean }) {
+export default function NavMobile() {
 	return (
 		<>
 			{' '}
@@ -40,7 +40,7 @@ export default function NavMobile({ isLogged }: { isLogged: boolean }) {
 								</div>
 							</div>
 							<div className='mt-6'>
-								<Nav isLogged={isLogged} className={'flex flex-col gap-8'} />
+								<Nav className={'flex flex-col gap-8'} />
 							</div>
 						</div>
 					</div>

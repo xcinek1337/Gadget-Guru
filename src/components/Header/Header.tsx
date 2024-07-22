@@ -18,7 +18,7 @@ export default async function Header() {
 				<NavMobile />
 
 				{/* desktop */}
-				<Nav isLogged={isLogged} className={'hidden sm:flex items-center justify-center gap-2 md:gap-8'} />
+				<Nav className={'hidden sm:flex items-center justify-center gap-2 md:gap-8'} />
 			</div>
 		</Popover>
 	)
