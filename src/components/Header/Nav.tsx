@@ -23,25 +23,35 @@ export const Nav = ({ className }: { className: string }) => {
 				<>
 					{navLinksLogged.map(link => (
 						<Link
-							className={`${pathname === link?.href ? 'font-bold' : ''} ${className}`}
+							className={`${
+								pathname === link?.href ? 'font-bold' : ''
+							} border-b-2-transparent hover:font-bold hover:border-b-2 hover:border-b-orange-200 transition `}
 							href={link?.href!}
 							key={link?.label}>
 							{link?.label}
 						</Link>
 					))}
-					<LogoutLink className={className}>Log Out</LogoutLink>
+					<LogoutLink
+						className={`border-2 border-gray-400 px-5 py-2 bg-gray-100 font-semibold rounded-full hover:bg-gray-200 transition text-center `}>
+						Log Out
+					</LogoutLink>
 				</>
 			) : (
 				<>
 					{navLinks.map(link => (
 						<Link
-							className={`${pathname === link.href ? 'font-bold' : ''} ${className}`}
+							className={`${
+								pathname === link.href ? 'font-bold' : ''
+							}  border-b-2-transparent hover:font-bold hover:border-b-2 hover:border-b-orange-200 transition `}
 							href={link.href}
 							key={link.label}>
 							{link.label}
 						</Link>
 					))}
-					<LoginLink className={className}>Login</LoginLink>
+					<LoginLink
+						className={`border-2 border-yellow-500 px-5 py-2 bg-yellow-300 font-semibold rounded-full hover:bg-yellow-200 transition text-center `}>
+						Login
+					</LoginLink>
 				</>
 			)}
 		</nav>
