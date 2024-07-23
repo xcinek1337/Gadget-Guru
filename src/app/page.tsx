@@ -13,7 +13,7 @@ export default function Home() {
 					</p>
 				</div>
 				<Link href='/posts'>
-					<button className='hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-1/4 border-2 px-6 py-4 rounded-xl bg-yellow-400/80 font-mono hover:bg-yellow-500/70 text-xl border-orange-400 font-semibold text-gray-800 transition'>
+					<button className='hidden lg:block absolute left-1/2 -translate-x-1/2 bottom-[12%] border-2 px-6 py-4 rounded-xl bg-yellow-400/80 font-mono hover:bg-yellow-500/70 text-xl border-orange-400 font-semibold text-gray-800 transition'>
 						Our technological news
 					</button>
 				</Link>
