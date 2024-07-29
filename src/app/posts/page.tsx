@@ -8,7 +8,7 @@ export default async function Page() {
     <div>
       {posts.map((post) => {
         return (
-          <p className='text-center'>{post.id} {post.title}</p>
+          <p key={post.id} className='text-center'>{post.id} {post.title}</p>
         )
       })}
     </div>
