@@ -54,7 +54,7 @@ export default function Form() {
 				placeholder='Title...'
 				name='title'
 			/>
-			{/* {errors.title && <p className='text-sm text-red-500'>{errors.title.message}</p>} */}
+			
 
 			<textarea
 				placeholder='Body content for new post...'
@@ -62,7 +62,7 @@ export default function Form() {
 				rows={12}
 				name='body'
 			/>
-			{/* {errors.body && <p className='text-sm text-red-500'>{errors.body.message}</p>} */}
+		
 
 			<button
 				className={`py-2 bg-yellow-500 px-5 rounded text-gray-50 font-bold tracking-widest transition ${
