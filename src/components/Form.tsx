@@ -1,10 +1,35 @@
-import createPost from '@/actions/action';
-import React from 'react';
+'use client';
+
+import createPost from '@/actions/createPost';
+import { FormEvent, useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Form() {
+	const notify = () => toast.success('Post published ');
+	const [isSubmitting, setIsSubmitting] = useState(false);
+
+	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setIsSubmitting(true);
+
+		const form = e.currentTarget;
+		const formData = new FormData(form);
+
+		try {
+			await createPost(formData);
+			notify();
+			form.reset();
+		} catch (error) {
+			toast.error('Failed to publish post');
+			console.error('Error creating post:', error);
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
+
 	return (
 		<form
-			action={createPost}
+			onSubmit={handleSubmit}
 			className=' max-w-[500px] flex flex-col px-4 py-8 gap-2 mx-auto mt-8 rounded-xl bg-white md:text-lg'
 		>
 			<input
@@ -23,7 +48,15 @@ export default function Form() {
 				rows={12}
 				required
 			/>
-			<button className='py-2 bg-yellow-500 px-5 rounded text-gray-50 font-bold  tracking-widest hover:bg-yellow-600 transition '>Submit</button>
+			<button
+				className={`py-2 bg-yellow-500 px-5 rounded text-gray-50 font-bold tracking-widest transition ${
+					isSubmitting ? 'cursor-not-allowed' : 'hover:bg-yellow-600'
+				}`}
+				disabled={isSubmitting}
+			>
+				{isSubmitting ? 'Submitting...' : 'Submit'}
+			</button>
+			<Toaster />
 		</form>
 	);
 }
