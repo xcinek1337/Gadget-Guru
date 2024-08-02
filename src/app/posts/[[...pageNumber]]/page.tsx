@@ -1,7 +1,6 @@
 import Pagination from '@/components/Pagination';
 import prisma from '@/db';
 import Link from 'next/link';
-import React from 'react';
 
 type PostsPageProps = {
 	params: {
@@ -24,13 +23,15 @@ export default async function PostPage({ params }: PostsPageProps) {
 			<ul className='flex flex-col gap-4 md:gap-5'>
 				{posts.map((post) => {
 					return (
-						<li className='border-4 border-green-500' key={post.id}>
+						<li key={post.id}>
 							<Link
-								href={`/post/${post.id}`}
 								className=''
+								href={`/post/${post.id}`}
 							>
-								<h2 className='font-bold mb-2'>{post.title}</h2>
-								<p className='px-2'>{post.body.split(' ').slice(0, 30).join(' ')}...</p>
+								<article className='bg-slate-50 px-4 py-5 shadow-md hover:bg-slate-200 rounded-sm'>
+									<h2 className='font-bold mb-2'>{post.title}</h2>
+									<p className='px-2'>{post.body.split(' ').slice(0, 30).join(' ')}...</p>
+								</article>
 							</Link>
 						</li>
 					);
