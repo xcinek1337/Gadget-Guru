@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![My Skills](https://skillicons.dev/icons?i=next,prisma,tailwind,react)](https://skillicons.dev)
+## GadgetGuru - Your Ultimate Source for Tech Trends
+[Live preview](<https://gadget-guru-rho.vercel.app>)
+### About The Project
+GadgetGuru is a blog platform focused on sharing the latest trends and innovations in the world of electronics. Users can explore and share insights about the newest gadgets and technologies. The application offers the following features:
 
-## Getting Started
+- Create Posts: Authenticated users can create and share their own posts about tech 
+- View Posts: All users, whether logged in or not, can view the posts.
+- User Authentication: Secure login through Kinde, ensuring a safe and seamless user experience.
+- Form Validation: Robust form validation using the Zod library ensures that all posts meet the required standards before being published.(nice notification in the form of toast)
+- Dynamic Routes: The app leverages Next.js dynamic routes for flexible and intuitive navigation.
+Server-Side Rendering: Server-side rendering ensures fast load times and improved SEO.
 
-First, run the development server:
+### Technologies and Solutions Used
+- Next.js: Utilized for its powerful framework capabilities, enabling dynamic routes and server-side rendering.
+- Kinde: Implemented for secure and reliable user authentication.
+- Zod: Used for form validation to ensure data integrity and user input quality.
+- TypeScript: Employed throughout the project for type safety and improved code quality.
+- Tailwind CSS: Integrated for efficient and responsive UI styling.
+- Vercel: Leveraged for storage solutions, and responsible for deployment.
+- Prisma: For simplifying database interactions and ensuring data integrity.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Contributions and Questions
+If you have any ideas for the development of this project or any questions, feel free to reach out to me. I am more than happy to answer any questions regarding the code and discuss potential improvements.
